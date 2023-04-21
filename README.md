@@ -37,3 +37,5 @@ On the projected data to classify data point use the linear score function, wher
 </p>
 
 Support vector machine take advatnage of Covers Theorem, which state if data is projected to infinity, the data can be perfectly serparated by a hyperplane. Therefore, if data is projected onto higher dimension than the data can be separated with little errors.
+
+Decision tree is 
