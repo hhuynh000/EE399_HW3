@@ -13,7 +13,7 @@ Singular value decomposition extract the principal components and reduce the dim
  $X = U \Sigma V^{T}$
 </p>
 
-Linear discriminate analysis project the data onto principal components that maximizes the variance between classes and minimizes the variance within classes. If there are C distinct classes, m is the mean of all data points and $m_{i}$ is the mean of a class, then $S_{w} gives the scatter within class and $S_{b}$ gives the scatter between class:
+Linear discriminate analysis project the data onto principal components that maximizes the variance between classes and minimizes the variance within classes. If there are C distinct classes, m is the mean of all data points and $m_{i}$ is the mean of a class, then $S_{w}$ gives the scatter within class and $S_{b}$ gives the scatter between class:
 <p align="center">
  $$S_{k} = \sum_{x(n)\in C_{i}}(x(n)-m_{i})(x(n)-m_{i})^{T}$$
 </p>
