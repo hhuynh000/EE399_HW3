@@ -87,7 +87,7 @@ Given that input data matrix X has each images as columns the resulting matrix U
   Figure 6. Top 6 Principal Components
 </p>
 
-The 784x784 diagonal matrix $/Sigma$ contains the singular value corresponding to the principal components ordered in descending value. The singular value can be seen in Figure 4 above. The 784x70000 matrix $V^{T}$ in combination with $/Sigma$ represent the original projected onto the principal components U:
+The 784x784 diagonal matrix $\Sigma$ contains the singular value corresponding to the principal components ordered in descending value. The singular value can be seen in Figure 4 above. The 784x70000 matrix $V^{T}$ in combination with $/Sigma$ represent the original projected onto the principal components U:
 <p align="center">
   $$X^{T} = (U\Sigma V^{T})^{T}$$
 </p>
