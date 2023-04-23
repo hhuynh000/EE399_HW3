@@ -63,7 +63,7 @@ accuracy score metric is used. The code used to split the data to only two speci
 </p>
 
 ## Results
-Performing SVD on the data matrix X where each columns is one image from the Mninist dataset. Based resutling singular values the top 200 ranks capture most of the data variance and are enough to get a good image reconstruction. The resulting singular values spectrum and the reconstructed images using the top 200 ranks are shown in the figure below.
+Performing SVD on the data matrix X where each columns is one image from the Mnist dataset. Based resutling singular values the top 200 ranks capture most of the data variance and are enough to get a good image reconstruction. The resulting singular values spectrum and the reconstructed images using the top 200 ranks are shown in the figure below.
 <p align="center">
   <img src="https://github.com/hhuynh000/EE399_HW3/blob/main/resources/svs.png" width="500"/>
 </p>
