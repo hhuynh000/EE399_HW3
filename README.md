@@ -98,7 +98,7 @@ The 784x784 diagonal matrix $/Sigma$ contains the singular value corresponding t
   $$X^{T}U = V\Sigma$$
 </p>
 
-When the data is projected on the three V-modes 2,3 and 5 the different digits can be seen to form different clusters when 3D plotted. The 3D plot with different digits colored is shown in the figure below.
+When the data is projected on the three V-modes 2,3 and 5 the different digits can be seen to form different clusters when 3D plotted. Although, the different digits clusters are very close to each other and have a lot of overlap. The 3D plot with different digits colored is shown in the figure below.
 
 <p align="center">
   <img src="https://github.com/hhuynh000/EE399_HW3/blob/main/resources/3D.png" width="500"/>
@@ -106,3 +106,81 @@ When the data is projected on the three V-modes 2,3 and 5 the different digits c
 <p align="center">
   Figure 7. V-Mode Projection 3D Plot
 </p>
+
+Starting with Linear Discriminate Analysis as the first classification model, test classifying two digits (1,8) and three digits (1,3,8):
+<p align="center">
+  Two digits Classification (1,8) Testing Accuracy: 0.979 <br>
+</p>
+
+<p align="center">
+  Three digits Classification (1,3,8) Testing Accuracy: 0.958
+</p>
+
+Test two digits classification on all digit pairs, the easiest pair to serparate is is 6 and 9 and the hardest pair to separate is 5 and 8:
+<p align="center">
+ Digits pair most difficult to separate (5, 8) <br>
+ Training Accuracy: 0.968 <br>
+ Testing Accuracy: 0.951
+</p>
+
+<p align="center">
+ Digits pair most easy to separate (6, 9) <br>
+ Training Accuracy: 0.998 <br>
+ Testing Accuracy: 0.996 <br>
+</p>
+
+Repeating the easiest and hardest digit pairs to serparate classification using the SVM and Decision Tree model with original data matrix projected onto the top 200 principal components:
+
+<p align="center">
+ Digits pair most difficult to separate (5, 8) <br>
+</p>
+
+<p align="center">
+  SVM Classification <br>
+  Training Accuracy: 0.997 <br>
+  Testing Accuracy: 0.994
+</p>
+
+<p align="center">
+ Decision Tree Classification <br>
+ Training Accuracy: 1.0 <br> 
+ Testing Accuracy: 0.923 <br> 
+</p>
+
+<p align="center">
+ Digits pair most easy to separate (6, 9) <br>
+</p>
+
+<p align="center">
+ SVM Classification <br>
+ Training Accuracy: 0.9997 <br>
+ Testing Accuracy: 0.9990 <br>
+</p>
+
+<p align="center">
+ Decision Tree Classification <br>
+ Training Accuracy: 1.0 <br>
+ Testing Accuracy: 0.978
+</p>
+
+Finally, test classifcation of all 10 digits using LDA, SVM and Decision Tree:
+<p align="center">
+ LDA Classifier <br>
+ Training Accuracy: 0.8714833333333334 <br>
+ Testing Accuracy: 0.873
+</p>
+
+<p align="center">
+ SVM Classifier <br> 
+ Training Accuracy: 0.987 <br>
+ Testing Accuracy: 0.978
+</p>
+
+<p align="center">
+ Decision Tree Classifier <br>
+ Training Accuracy: 1.0 <br>
+ Testing Accuracy: 0.837
+</p>
+
+## Conclusion
+In conclusion, given a data set with high dimensionality and hard to serparate like the Mninist dataset as shown in Figure 7, linearly separating the data with model like LDA is difficult. Classification of all 10 digits using LDA only result in a testing accuracy of 87.3%. While, SVD does significantly better with a testing accuracy of 97.8% by projecting the data into higher dimension and applying Cover Theorem. Decision Tree classifier struggle with a testing accuracy of 83.7%. Although, Decision Tree classifier might be over fitting the training data with a 100% accuracy. Perhap using Random Forest can improve the accuracy and prevent over fitting. In addititon, different digits are harder to distinguish than others as shown by the two digits classification testing. Digits like 5 and 8 have similar feature in handwriting making them difficult to separate. On the contrary, digits like 6 and 9 are flipped version of each other, making them easier to serparate. 
